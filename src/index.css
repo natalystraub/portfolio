@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg: #060a18;
+  --bg-2: #0b1230;
+  --card: rgb(18 28 68 / 0.55);
+  --card-solid: #0e1638;
+  --ink: #eef2ff;
+  --muted: #9aa7c7;
+  --line: rgb(150 170 255 / 0.17);
+  --blue: #4d6bff;
+  --ice: #b7cbff;
+  --violet: #8b6cff;
+  --glow: rgb(77 107 255 / 0.38);
+
+  --font-display: 'Sora', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
