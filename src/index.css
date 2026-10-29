@@ -12,6 +12,7 @@
   --blue: #4d6bff;
   --ice: #b7cbff;
   --violet: #8b6cff;
+  --warm: #ffb86b;
   --glow: rgb(77 107 255 / 0.38);
 
   --font-display: 'Sora', 'Helvetica Neue', Arial, sans-serif;
@@ -32,4 +33,26 @@ body {
   outline: 2px solid var(--blue);
   outline-offset: 3px;
   border-radius: 6px;
+}
+
+.hero-letter {
+  --p: 0;
+  display: inline-block;
+  transform: translateY(calc(var(--p) * -6px));
+  transition: color 0.15s, transform 0.15s;
+}
+
+.hero-letter--fill {
+  color: color-mix(in srgb, var(--blue) calc(var(--p) * 100%), var(--ink));
+}
+
+.hero-letter--outline {
+  color: color-mix(in srgb, var(--blue) calc(var(--p) * 100%), transparent);
+  -webkit-text-stroke: 1.2px var(--ink);
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
 }
