@@ -62,7 +62,7 @@ export function MobileMenu({ isOpen, lang, activeId, onClose, onToggleLang }: Mo
               key={link.id}
               href={link.href}
               onClick={onClose}
-              className={`border-b border-(--line) px-1 py-3.5 font-(--font-display) text-xl font-semibold tracking-[-0.015em] no-underline ${
+              className={`border-b border-(--line) px-1 py-3.5 font-(family-name:--font-display) text-xl font-semibold tracking-[-0.015em] no-underline ${
                 activeId === link.id ? 'text-(--blue)' : 'text-(--ink)'
               }`}
             >

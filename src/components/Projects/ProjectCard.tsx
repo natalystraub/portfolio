@@ -31,12 +31,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
     >
       <div className={`relative flex flex-col ${project.reversed ? 'lg:order-2' : ''}`}>
         <div className="mb-4 flex flex-wrap items-center gap-2.5">
-          <span className="rounded-md border border-(--line) px-2.5 py-1 font-(--font-mono) text-[12.5px] font-medium text-(--ice)">
+          <span className="rounded-md border border-(--line) px-2.5 py-1 font-(family-name:--font-mono) text-[12.5px] font-medium text-(--ice)">
             {project.tag}
           </span>
-          <span className="font-(--font-mono) text-[13px] text-(--muted)">{project.year}</span>
+          <span className="font-(family-name:--font-mono) text-[13px] text-(--muted)">{project.year}</span>
         </div>
-        <h3 className="m-0 mb-3.5 font-(--font-display) text-[clamp(22px,2.6vw,32px)] font-bold tracking-[-0.025em] text-(--ink) leading-[1.1]">
+        <h3 className="m-0 mb-3.5 font-(family-name:--font-display) text-[clamp(22px,2.6vw,32px)] font-bold tracking-[-0.025em] text-(--ink) leading-[1.1]">
           {project.title}
         </h3>
         <p className="m-0 mb-3.5 max-w-[48ch] text-[15px] text-(--muted)">{project.description}</p>

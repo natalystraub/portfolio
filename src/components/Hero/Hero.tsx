@@ -7,9 +7,9 @@ export function Hero() {
   const role = useTypewriter(HERO_ROLE_WORDS);
 
   return (
-    <div className="mx-auto flex max-w-[1160px] flex-col px-5 py-12 sm:py-16 lg:min-h-[600px] lg:justify-center lg:py-24">
+    <div className="mx-auto flex max-w-[1160px] flex-col px-5 py-12 font-bold sm:py-16 lg:min-h-[600px] lg:justify-center lg:py-24">
       <HeroName />
-      <p className="m-0 mb-3.5 font-(--font-display) text-[clamp(17px,2vw,24px)] font-medium tracking-[-0.02em] text-(--ink)">
+      <p className="m-0 mb-3.5 font-(family-name:--font-display) text-[clamp(17px,2vw,24px)] font-medium tracking-[-0.02em] text-(--ink)">
         {HERO_ROLE_PREFIX}{' '}
         <b className="border-r-[3px] border-(--ice) pr-1 font-bold text-(--ice) motion-safe:animate-[caret_1s_steps(1)_infinite]">
           {role}

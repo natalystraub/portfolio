@@ -15,7 +15,7 @@ export function LandingMockup() {
         {CHIPS.map((label) => (
           <span
             key={label}
-            className="rounded-md border border-(--blue) px-2.5 py-1 font-(--font-mono) text-[11.5px] font-medium text-(--ice)"
+            className="rounded-md border border-(--blue) px-2.5 py-1 font-(family-name:--font-mono) text-[11.5px] font-medium text-(--ice)"
           >
             {label}
           </span>

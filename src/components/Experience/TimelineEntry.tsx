@@ -30,12 +30,12 @@ export function TimelineEntry({ entry, index, isActive, registerRef }: TimelineE
           isOdd ? 'lg:-right-12' : 'lg:-left-12'
         } ${isActive ? 'border-(--blue) shadow-[0_0_0_6px_var(--glow)]' : 'border-(--line)'}`}
       />
-      <div className="relative font-(--font-mono) text-[13px] text-(--muted)">{entry.period}</div>
-      <h4 className="relative m-0 mt-1.5 mb-2 font-(--font-display) text-[17px] font-semibold tracking-[-0.01em] text-(--ink)">
+      <div className="relative font-(family-name:--font-mono) text-[13px] text-(--muted)">{entry.period}</div>
+      <h4 className="relative m-0 mt-1.5 mb-2 font-(family-name:--font-display) text-[17px] font-semibold tracking-[-0.01em] text-(--ink)">
         {entry.title}
       </h4>
       <p className="relative m-0 text-[14.5px] text-(--muted)">{entry.description}</p>
-      <span className="relative mt-3.5 inline-block rounded-md border border-(--line) px-2.5 py-1 font-(--font-mono) text-[12.5px] font-medium text-(--ice)">
+      <span className="relative mt-3.5 inline-block rounded-md border border-(--line) px-2.5 py-1 font-(family-name:--font-mono) text-[12.5px] font-medium text-(--ice)">
         {entry.tag}
       </span>
     </div>

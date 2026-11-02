@@ -9,7 +9,7 @@ export function Contact() {
   return (
     <section id="contato" className="px-5 pt-16 pb-[90px] text-center lg:pt-[88px]">
       <div className="mx-auto max-w-[1160px]">
-        <h2 className="m-0 mb-[30px] font-(--font-display) text-[clamp(30px,5.6vw,72px)] leading-[1.05] font-bold tracking-[-0.03em]">
+        <h2 className="m-0 mb-[30px] font-(family-name:--font-display) text-[clamp(30px,5.6vw,72px)] leading-[1.05] font-bold tracking-[-0.03em]">
           <span className="text-transparent [-webkit-text-stroke:1.2px_var(--ink)]">{CONTACT_HEADING.outline}</span>
           <br />
           <span className="text-(--ink)">{CONTACT_HEADING.filled}</span>

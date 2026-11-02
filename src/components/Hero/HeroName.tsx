@@ -44,7 +44,7 @@ export function HeroName() {
     <h1
       ref={containerRef}
       aria-label={HERO_NAME_ROWS.join(' ')}
-      className="m-0 mb-[22px] whitespace-nowrap font-(--font-display) text-[clamp(24px,7.4vw,86px)] font-bold uppercase leading-[1] tracking-[-0.03em]"
+      className="m-0 mb-[22px] whitespace-nowrap font-(family-name:--font-display) text-[clamp(24px,7.4vw,86px)] font-bold uppercase leading-[1] tracking-[-0.03em]"
     >
       {HERO_NAME_ROWS.map((row, rowIndex) => (
         <span key={row} aria-hidden="true" className={`inline-flex ${rowIndex > 0 ? 'ml-[0.3em]' : ''}`}>

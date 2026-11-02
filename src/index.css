@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --bg: #060a18;
@@ -39,7 +39,9 @@ body {
   --p: 0;
   display: inline-block;
   transform: translateY(calc(var(--p) * -6px));
-  transition: color 0.15s, transform 0.15s;
+  transition:
+    color 0.15s,
+    transform 0.15s;
 }
 
 .hero-letter--fill {

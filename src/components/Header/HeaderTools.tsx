@@ -13,7 +13,7 @@ export function HeaderTools({ lang, onToggleLang, className = '' }: HeaderToolsP
         type="button"
         onClick={onToggleLang}
         aria-label="Alternar idioma"
-        className="cursor-pointer rounded-full border border-(--line) bg-transparent px-3 py-1.5 font-(--font-mono) text-xs font-medium text-(--ink) transition-colors hover:border-(--blue)"
+        className="cursor-pointer rounded-full border border-(--line) bg-transparent px-3 py-1.5 font-(family-name:--font-mono) text-xs font-medium text-(--ink) transition-colors hover:border-(--blue)"
       >
         {lang === 'pt' ? 'PT / EN' : 'EN / PT'}
       </button>

@@ -12,7 +12,7 @@ export function TechMarquee() {
         {items.map((tech, index) => (
           <span
             key={`${tech}-${index}`}
-            className="flex items-center font-(--font-display) text-sm font-semibold tracking-[-0.01em] whitespace-nowrap text-(--muted) sm:text-lg"
+            className="flex items-center font-(family-name:--font-display) text-sm font-semibold tracking-[-0.01em] whitespace-nowrap text-(--muted) sm:text-lg"
           >
             {tech}
             <i className="ml-6 inline-block h-2 w-2 rotate-45 rounded-sm bg-(--blue) sm:ml-10" />

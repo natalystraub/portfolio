@@ -12,7 +12,7 @@ export function BrowserWindow({ url, children }: BrowserWindowProps) {
         <i className="h-2.5 w-2.5 rounded-full bg-(--line)" />
         <i className="h-2.5 w-2.5 rounded-full bg-(--line)" />
         <i className="h-2.5 w-2.5 rounded-full bg-(--line)" />
-        <em className="ml-2.5 max-w-[240px] flex-1 truncate rounded-md bg-(--bg) px-3 py-[3px] font-(--font-mono) text-xs not-italic text-(--muted)">
+        <em className="ml-2.5 max-w-[240px] flex-1 truncate rounded-md bg-(--bg) px-3 py-[3px] font-(family-name:--font-mono) text-xs not-italic text-(--muted)">
           {url}
         </em>
       </div>

@@ -1,7 +1,7 @@
 export function EmailMockup() {
   return (
     <>
-      <div className="border-b border-(--line) pb-2.5 font-(--font-mono) text-xs text-(--muted)">
+      <div className="border-b border-(--line) pb-2.5 font-(family-name:--font-mono) text-xs text-(--muted)">
         Assunto: <b className="font-medium text-(--ice)">sua oferta chegou</b>
       </div>
       <div className="h-[70px] rounded-md bg-(--bg-2)" />
