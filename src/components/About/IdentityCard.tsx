@@ -1,15 +1,19 @@
+import { useLanguage } from '../../hooks/useLanguage';
 import { useSpotlight } from '../../hooks/useSpotlight';
 import type { AboutStat } from '../../types/about';
 
 type IdentityCardProps = {
   initials: string;
   name: string;
-  role: string;
+  rolePt: string;
+  roleEn: string;
   stats: AboutStat[];
 };
 
-export function IdentityCard({ initials, name, role, stats }: IdentityCardProps) {
+export function IdentityCard({ initials, name, rolePt, roleEn, stats }: IdentityCardProps) {
+  const { lang } = useLanguage();
   const { ref, onMouseMove } = useSpotlight<HTMLDivElement>();
+  const isPt = lang === 'pt';
 
   return (
     <div
@@ -21,12 +25,12 @@ export function IdentityCard({ initials, name, role, stats }: IdentityCardProps)
         {initials}
       </div>
       <h3 className="relative m-0 mb-0.5 font-(family-name:--font-display) text-[19px] text-(--ink)">{name}</h3>
-      <p className="relative m-0 text-sm text-(--muted)">{role}</p>
+      <p className="relative m-0 text-sm text-(--muted)">{isPt ? rolePt : roleEn}</p>
       <ul className="relative m-0 mt-4 list-none p-0 text-left text-sm">
         {stats.map((stat) => (
-          <li key={stat.label} className="flex justify-between border-t border-(--line) py-2.5 text-(--ink)">
-            <span className="text-(--muted)">{stat.label}</span>
-            {stat.value}
+          <li key={stat.labelPt} className="flex justify-between border-t border-(--line) py-2.5 text-(--ink)">
+            <span className="text-(--muted)">{isPt ? stat.labelPt : stat.labelEn}</span>
+            {isPt ? stat.valuePt : stat.valueEn}
           </li>
         ))}
       </ul>

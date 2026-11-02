@@ -1,5 +1,6 @@
 export type ContactLink = {
-  label: string;
+  labelPt: string;
+  labelEn: string;
   href: string;
   download?: boolean;
 };

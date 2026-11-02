@@ -1,5 +1,7 @@
 export type TechTile = {
   id: string;
-  category: string;
-  title: string;
+  categoryPt: string;
+  categoryEn: string;
+  titlePt: string;
+  titleEn: string;
 };

@@ -1,3 +1,4 @@
+import { useLanguage } from '../../hooks/useLanguage';
 import { useSpotlight } from '../../hooks/useSpotlight';
 import type { Project } from '../../types/project';
 import { BrowserWindow } from '../../ui/BrowserWindow';
@@ -16,8 +17,10 @@ const MOCKUPS = {
 };
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const { lang } = useLanguage();
   const { ref, onMouseMove } = useSpotlight<HTMLElement>();
   const Mockup = MOCKUPS[project.mockup];
+  const isPt = lang === 'pt';
 
   return (
     <article
@@ -32,16 +35,20 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className={`relative flex flex-col ${project.reversed ? 'lg:order-2' : ''}`}>
         <div className="mb-4 flex flex-wrap items-center gap-2.5">
           <span className="rounded-md border border-(--line) px-2.5 py-1 font-(family-name:--font-mono) text-[12.5px] font-medium text-(--ice)">
-            {project.tag}
+            {isPt ? project.tagPt : project.tagEn}
           </span>
-          <span className="font-(family-name:--font-mono) text-[13px] text-(--muted)">{project.year}</span>
+          <span className="font-(family-name:--font-mono) text-[13px] text-(--muted)">
+            {isPt ? project.yearPt : project.yearEn}
+          </span>
         </div>
         <h3 className="m-0 mb-3.5 font-(family-name:--font-display) text-[clamp(22px,2.6vw,32px)] font-bold tracking-[-0.025em] text-(--ink) leading-[1.1]">
-          {project.title}
+          {isPt ? project.titlePt : project.titleEn}
         </h3>
-        <p className="m-0 mb-3.5 max-w-[48ch] text-[15px] text-(--muted)">{project.description}</p>
+        <p className="m-0 mb-3.5 max-w-[48ch] text-[15px] text-(--muted)">
+          {isPt ? project.descriptionPt : project.descriptionEn}
+        </p>
         <ul className="m-0 mb-5 list-none p-0 text-sm">
-          {project.highlights.map((item) => (
+          {(isPt ? project.highlightsPt : project.highlightsEn).map((item) => (
             <li
               key={item}
               className="relative mb-1.5 pl-[22px] text-(--ink) before:absolute before:top-[11px] before:left-0 before:h-0.5 before:w-2.5 before:bg-(--blue) before:content-['']"
@@ -53,13 +60,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex flex-wrap gap-3">
           {project.links.map((link, index) => (
             <a
-              key={link.label}
+              key={link.labelPt}
               href={link.href}
               className={`rounded-lg border px-[15px] py-2 text-[13.5px] font-semibold no-underline transition-colors hover:border-(--blue) ${
                 index === 0 ? 'border-(--ink) bg-(--ink) text-(--bg)' : 'border-(--line) text-(--ink)'
               }`}
             >
-              {link.label}
+              {isPt ? link.labelPt : link.labelEn}
             </a>
           ))}
         </div>

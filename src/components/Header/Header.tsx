@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import { useLanguage } from '../../hooks/useLanguage';
 import { useActiveSection } from '../../hooks/useActiveSection';
-import type { Language } from '../../types/navigation';
 import { HeaderTools } from './HeaderTools';
 import { Logo } from './Logo';
 import { MobileMenu } from './MobileMenu';
@@ -8,13 +8,9 @@ import { Nav } from './Nav';
 import { NAV_LINKS } from './nav-links';
 
 export function Header() {
-  const [lang, setLang] = useState<Language>('pt');
+  const { lang, toggleLang } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const activeId = useActiveSection(NAV_LINKS.map((link) => link.id));
-
-  function toggleLang() {
-    setLang((current) => (current === 'pt' ? 'en' : 'pt'));
-  }
 
   return (
     <>

@@ -1,20 +1,33 @@
+import { useLanguage } from '../../hooks/useLanguage';
 import { ABOUT } from './about-content';
 import { IdentityCard } from './IdentityCard';
 
 export function About() {
+  const { lang } = useLanguage();
+  const isPt = lang === 'pt';
+  const paragraphs = isPt ? ABOUT.paragraphsPt : ABOUT.paragraphsEn;
+
   return (
     <section id="sobre" className="px-5 py-16 lg:py-[88px]">
       <div className="mx-auto max-w-[1160px]">
         <div className="mb-10 flex flex-wrap items-baseline gap-4">
           <h2 className="m-0 font-(family-name:--font-display) text-[clamp(28px,4vw,48px)] leading-none font-bold tracking-[-0.03em] text-(--ink)">
-            Sobre
+            {isPt ? 'Sobre' : 'About'}
           </h2>
-          <small className="font-(family-name:--font-mono) text-xs text-(--muted)">// quem sou</small>
+          <small className="font-(family-name:--font-mono) text-xs text-(--muted)">
+            {isPt ? '// quem sou' : '// who I am'}
+          </small>
         </div>
         <div className="grid grid-cols-1 items-start gap-[30px] lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] lg:gap-12">
-          <IdentityCard initials={ABOUT.initials} name={ABOUT.name} role={ABOUT.role} stats={ABOUT.stats} />
+          <IdentityCard
+            initials={ABOUT.initials}
+            name={ABOUT.name}
+            rolePt={ABOUT.rolePt}
+            roleEn={ABOUT.roleEn}
+            stats={ABOUT.stats}
+          />
           <div>
-            {ABOUT.paragraphs.map((paragraph, index) => (
+            {paragraphs.map((paragraph, index) => (
               <p
                 key={paragraph}
                 className={
@@ -29,10 +42,10 @@ export function About() {
             <div className="mt-7 flex flex-wrap gap-2.5">
               {ABOUT.pills.map((pill) => (
                 <span
-                  key={pill}
+                  key={pill.pt}
                   className="rounded-full border border-(--line) bg-(--card) px-3.5 py-1.5 text-[13.5px] text-(--ink)"
                 >
-                  {pill}
+                  {isPt ? pill.pt : pill.en}
                 </span>
               ))}
             </div>

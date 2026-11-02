@@ -1,7 +1,11 @@
 export type ExperienceEntry = {
   id: string;
-  period: string;
-  title: string;
-  description: string;
-  tag: string;
+  periodPt: string;
+  periodEn: string;
+  titlePt: string;
+  titleEn: string;
+  descriptionPt: string;
+  descriptionEn: string;
+  tagPt: string;
+  tagEn: string;
 };

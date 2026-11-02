@@ -1,13 +1,22 @@
 export type AboutStat = {
-  label: string;
-  value: string;
+  labelPt: string;
+  labelEn: string;
+  valuePt: string;
+  valueEn: string;
+};
+
+export type AboutPill = {
+  pt: string;
+  en: string;
 };
 
 export type AboutContent = {
   initials: string;
   name: string;
-  role: string;
+  rolePt: string;
+  roleEn: string;
   stats: AboutStat[];
-  paragraphs: string[];
-  pills: string[];
+  paragraphsPt: string[];
+  paragraphsEn: string[];
+  pills: AboutPill[];
 };

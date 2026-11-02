@@ -1,3 +1,4 @@
+import { useLanguage } from '../../hooks/useLanguage';
 import { useSpotlight } from '../../hooks/useSpotlight';
 import type { ExperienceEntry } from '../../types/experience';
 
@@ -9,8 +10,10 @@ type TimelineEntryProps = {
 };
 
 export function TimelineEntry({ entry, index, isActive, registerRef }: TimelineEntryProps) {
+  const { lang } = useLanguage();
   const { ref: spotRef, onMouseMove } = useSpotlight<HTMLDivElement>();
   const isOdd = index % 2 === 0;
+  const isPt = lang === 'pt';
 
   function setRefs(el: HTMLDivElement | null) {
     spotRef.current = el;
@@ -30,13 +33,15 @@ export function TimelineEntry({ entry, index, isActive, registerRef }: TimelineE
           isOdd ? 'lg:-right-12' : 'lg:-left-12'
         } ${isActive ? 'border-(--blue) shadow-[0_0_0_6px_var(--glow)]' : 'border-(--line)'}`}
       />
-      <div className="relative font-(family-name:--font-mono) text-[13px] text-(--muted)">{entry.period}</div>
+      <div className="relative font-(family-name:--font-mono) text-[13px] text-(--muted)">
+        {isPt ? entry.periodPt : entry.periodEn}
+      </div>
       <h4 className="relative m-0 mt-1.5 mb-2 font-(family-name:--font-display) text-[17px] font-semibold tracking-[-0.01em] text-(--ink)">
-        {entry.title}
+        {isPt ? entry.titlePt : entry.titleEn}
       </h4>
-      <p className="relative m-0 text-[14.5px] text-(--muted)">{entry.description}</p>
+      <p className="relative m-0 text-[14.5px] text-(--muted)">{isPt ? entry.descriptionPt : entry.descriptionEn}</p>
       <span className="relative mt-3.5 inline-block rounded-md border border-(--line) px-2.5 py-1 font-(family-name:--font-mono) text-[12.5px] font-medium text-(--ice)">
-        {entry.tag}
+        {isPt ? entry.tagPt : entry.tagEn}
       </span>
     </div>
   );

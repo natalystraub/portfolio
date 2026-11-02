@@ -1,7 +1,8 @@
 import type { ButtonVariant } from './button';
 
 export type HeroCtaLink = {
-  label: string;
+  labelPt: string;
+  labelEn: string;
   href: string;
   variant: ButtonVariant;
   download?: boolean;
