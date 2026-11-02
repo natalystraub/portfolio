@@ -9,7 +9,7 @@ import { TechStack } from '../components/TechStack/TechStack';
 
 export function Home() {
   return (
-    <main id="topo" className="pt-[63px]">
+    <main id="topo" className="relative z-10 pt-[63px]">
       <Hero />
       <TechMarquee />
       <Projects />
