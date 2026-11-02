@@ -1,4 +1,5 @@
 import { Hero } from '../components/Hero/Hero';
+import { TechMarquee } from '../components/TechMarquee/TechMarquee';
 
 const SECTIONS = ['projetos', 'experiencia', 'tecnologias', 'educacao', 'sobre', 'contato'];
 
@@ -6,6 +7,7 @@ export function Home() {
   return (
     <main id="topo" className="pt-[63px]">
       <Hero />
+      <TechMarquee />
       {SECTIONS.map((id) => (
         <section key={id} id={id} className="min-h-screen border-t border-(--line) px-5 py-16">
           <div className="mx-auto max-w-[1160px]">
