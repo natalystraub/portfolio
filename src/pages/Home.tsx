@@ -1,10 +1,11 @@
+import { Education } from '../components/Education/Education';
 import { Experience } from '../components/Experience/Experience';
 import { Hero } from '../components/Hero/Hero';
 import { Projects } from '../components/Projects/Projects';
 import { TechMarquee } from '../components/TechMarquee/TechMarquee';
 import { TechStack } from '../components/TechStack/TechStack';
 
-const SECTIONS = ['educacao', 'sobre', 'contato'];
+const SECTIONS = ['sobre', 'contato'];
 
 export function Home() {
   return (
@@ -14,6 +15,7 @@ export function Home() {
       <Projects />
       <Experience />
       <TechStack />
+      <Education />
       {SECTIONS.map((id) => (
         <section key={id} id={id} className="min-h-screen border-t border-(--line) px-5 py-16">
           <div className="mx-auto max-w-[1160px]">
