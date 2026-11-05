@@ -14,9 +14,6 @@ export function Experience() {
           <h2 className="m-0 font-(family-name:--font-display) text-[clamp(28px,4vw,48px)] leading-none font-bold tracking-[-0.03em] text-(--ink)">
             {lang === 'pt' ? 'Experiência' : 'Experience'}
           </h2>
-          <small className="font-(family-name:--font-mono) text-xs text-(--muted)">
-            {lang === 'pt' ? '// onde eu atuei' : "// where I've worked"}
-          </small>
         </div>
         <div ref={wrapRef} className="relative mx-auto max-w-[900px]">
           <div className="absolute top-0 bottom-0 left-[14px] w-0.5 bg-(--line) lg:left-1/2 lg:-translate-x-1/2" />

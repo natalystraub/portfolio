@@ -12,9 +12,6 @@ export function Projects() {
           <h2 className="m-0 font-(family-name:--font-display) text-[clamp(28px,4vw,48px)] leading-none font-bold tracking-[-0.03em] text-(--ink)">
             {lang === 'pt' ? 'Projetos' : 'Projects'}
           </h2>
-          <small className="font-(family-name:--font-mono) text-xs text-(--muted)">
-            {lang === 'pt' ? '// trabalhos selecionados' : '// selected work'}
-          </small>
         </div>
         <div className="flex flex-col gap-[22px]">
           {PROJECTS.map((project) => (

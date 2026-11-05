@@ -14,9 +14,6 @@ export function About() {
           <h2 className="m-0 font-(family-name:--font-display) text-[clamp(28px,4vw,48px)] leading-none font-bold tracking-[-0.03em] text-(--ink)">
             {isPt ? 'Sobre' : 'About'}
           </h2>
-          <small className="font-(family-name:--font-mono) text-xs text-(--muted)">
-            {isPt ? '// quem sou' : '// who I am'}
-          </small>
         </div>
         <div className="grid grid-cols-1 items-start gap-[30px] lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] lg:gap-12">
           <IdentityCard

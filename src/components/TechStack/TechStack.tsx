@@ -12,9 +12,6 @@ export function TechStack() {
           <h2 className="m-0 font-(family-name:--font-display) text-[clamp(28px,4vw,48px)] leading-none font-bold tracking-[-0.03em] text-(--ink)">
             {lang === 'pt' ? 'Tecnologias' : 'Stack'}
           </h2>
-          <small className="font-(family-name:--font-mono) text-xs text-(--muted)">
-            {lang === 'pt' ? '// o que eu uso' : '// what I use'}
-          </small>
         </div>
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           {TECH_STACK.map((tile) => (
