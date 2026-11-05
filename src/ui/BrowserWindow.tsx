@@ -16,7 +16,9 @@ export function BrowserWindow({ url, children }: BrowserWindowProps) {
           {url}
         </em>
       </div>
-      <div className="grid min-h-[220px] content-start gap-2.5 p-4 sm:min-h-[240px]">{children}</div>
+      <div className="grid min-h-[220px] grid-cols-[minmax(0,1fr)] content-start gap-2.5 p-4 sm:min-h-[240px]">
+        {children}
+      </div>
     </div>
   );
 }

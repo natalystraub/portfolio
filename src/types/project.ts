@@ -1,4 +1,4 @@
-export type ProjectMockup = 'landing' | 'api' | 'email';
+export type ProjectMockup = 'tasks' | 'stream';
 
 export type ProjectLink = {
   labelPt: string;
@@ -18,8 +18,23 @@ export type Project = {
   descriptionEn: string;
   highlightsPt: string[];
   highlightsEn: string[];
+  stack: string[];
   links: ProjectLink[];
   mockup: ProjectMockup;
   url: string;
   reversed?: boolean;
+};
+
+export type MockTask = {
+  id: number;
+  titlePt: string;
+  titleEn: string;
+  descriptionPt?: string;
+  descriptionEn?: string;
+  isCompleted: boolean;
+};
+
+export type MockStreamer = {
+  username: string;
+  isLive: boolean;
 };
