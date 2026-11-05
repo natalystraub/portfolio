@@ -25,6 +25,7 @@ export const PROJECTS: Project[] = [
     ],
     stack: ['React', 'Tailwind CSS', 'React Router', 'Vite'],
     links: [
+      { labelPt: 'Ver demo', labelEn: 'Live demo', href: 'https://task-manager-react-khaki.vercel.app/' },
       { labelPt: 'Ver código', labelEn: 'Source code', href: 'https://github.com/natalystraub/task-manager-react' },
     ],
     mockup: 'tasks',
@@ -54,6 +55,7 @@ export const PROJECTS: Project[] = [
     ],
     stack: ['React', 'CSS Modules', 'Fetch API', 'Vite'],
     links: [
+      { labelPt: 'Ver demo', labelEn: 'Live demo', href: 'https://chess-stream-filter.vercel.app/' },
       { labelPt: 'Ver código', labelEn: 'Source code', href: 'https://github.com/natalystraub/chess-stream-filter' },
     ],
     mockup: 'stream',
