@@ -24,8 +24,14 @@ export function Button({ variant = 'secondary', className = '', children, ...pro
   const classes = `inline-flex items-center gap-2 rounded-[10px] border px-5 py-[11px] text-[14.5px] font-semibold no-underline transition-transform hover:-translate-y-0.5 ${VARIANT_CLASSES[variant]} ${className}`;
 
   if (props.href) {
+    const isExternal = props.href.startsWith('http');
+
     return (
-      <a className={classes} {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}>
+      <a
+        className={classes}
+        {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}
+      >
         {children}
       </a>
     );
