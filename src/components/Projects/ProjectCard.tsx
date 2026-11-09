@@ -3,6 +3,7 @@ import { useSpotlight } from '../../hooks/useSpotlight';
 import type { ComponentType } from 'react';
 import type { Project, ProjectMockup } from '../../types/project';
 import { BrowserWindow } from '../../ui/BrowserWindow';
+import { ChatMockup } from './ChatMockup';
 import { StreamFilterMockup } from './StreamFilterMockup';
 import { TaskManagerMockup } from './TaskManagerMockup';
 
@@ -13,6 +14,7 @@ type ProjectCardProps = {
 const MOCKUPS: Record<ProjectMockup, ComponentType> = {
   tasks: TaskManagerMockup,
   stream: StreamFilterMockup,
+  chat: ChatMockup,
 };
 
 function isExternal(href: string) {

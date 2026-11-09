@@ -1,4 +1,4 @@
-export type ProjectMockup = 'tasks' | 'stream';
+export type ProjectMockup = 'tasks' | 'stream' | 'chat';
 
 export type ProjectLink = {
   labelPt: string;
@@ -37,4 +37,11 @@ export type MockTask = {
 export type MockStreamer = {
   username: string;
   isLive: boolean;
+};
+
+export type MockMessage = {
+  id: number;
+  sender: 'user' | 'bot';
+  textPt: string;
+  textEn: string;
 };

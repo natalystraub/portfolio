@@ -62,4 +62,33 @@ export const PROJECTS: Project[] = [
     url: 'natalystraub/chess-stream-filter',
     reversed: true,
   },
+  {
+    id: 'chat-offline',
+    tagPt: 'React',
+    tagEn: 'React',
+    yearPt: '2026',
+    yearEn: '2026',
+    titlePt: 'Chat Offline',
+    titleEn: 'Offline Chat',
+    descriptionPt:
+      'Janela de chat sem backend dentro de uma moldura de iPhone: a mesma pessoa envia mensagens como usuário ou como robô, para prototipar conversas visualmente.',
+    descriptionEn:
+      'A backend-free chat window inside an iPhone frame: the same person sends messages as a user or as a bot, to prototype conversations visually.',
+    highlightsPt: [
+      'Toggle usuário/robô com mensagens alinhadas por remetente',
+      'Textarea que cresce e indicador de "digitando"',
+      'Auto-scroll e uso completo só pelo teclado',
+    ],
+    highlightsEn: [
+      'User/bot toggle with messages aligned by sender',
+      'Auto-growing textarea and a "typing" indicator',
+      'Auto-scroll and fully keyboard-friendly',
+    ],
+    stack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
+    links: [
+      { labelPt: 'Ver código', labelEn: 'Source code', href: 'https://github.com/natalystraub/chat-offline-interface' },
+    ],
+    mockup: 'chat',
+    url: 'natalystraub/chat-offline-interface',
+  },
 ];

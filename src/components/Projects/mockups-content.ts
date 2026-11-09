@@ -1,4 +1,4 @@
-import type { MockStreamer, MockTask } from '../../types/project';
+import type { MockMessage, MockStreamer, MockTask } from '../../types/project';
 
 export const INITIAL_TASKS: MockTask[] = [
   {
@@ -43,3 +43,9 @@ export const STREAMERS: MockStreamer[] = [
 ];
 
 export const STREAMERS_PAGE_SIZE = 6;
+
+export const INITIAL_MESSAGES: MockMessage[] = [
+  { id: 1, sender: 'bot', textPt: 'Olá! Como posso ajudar?', textEn: 'Hi! How can I help?' },
+  { id: 2, sender: 'user', textPt: 'Quero testar uma conversa.', textEn: 'I want to try out a conversation.' },
+  { id: 3, sender: 'bot', textPt: 'Fique à vontade, é só alternar quem escreve.', textEn: 'Go ahead, just switch who is typing.' },
+];
